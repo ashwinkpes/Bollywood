@@ -15,6 +15,8 @@ namespace Bollywood.Controllers
             this.movieRepository = movieRepository;
         }
 
+        [HttpGet]
+        [Route("Movies")]
         public async Task<IActionResult> GetMovies()
         {
             var allMovies = await movieRepository.GetAllMovies();
