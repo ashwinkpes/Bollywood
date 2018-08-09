@@ -7,5 +7,6 @@ namespace Bollywood.DataAccess.Interfaces
     public interface IMovieRepository
     {
         Task<List<Movie>> GetAllMovies();
+        Task<Movie> GetMovieById(int id);
     }
 }

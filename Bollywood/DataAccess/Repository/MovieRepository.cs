@@ -19,5 +19,10 @@ namespace Bollywood.DataAccess.Repository
         {
             return await _bollywoodDbContext.Movies.ToListAsync().ConfigureAwait(false); 
         }
+
+        public async Task<Movie> GetMovieById(int id)
+        {
+            return await _bollywoodDbContext.Movies.FirstOrDefaultAsync(s=>s.MovieId == id).ConfigureAwait(false);
+        }
     }
 }
